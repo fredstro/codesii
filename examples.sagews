@@ -1,20 +1,45 @@
-︠43bc3cf2-86b8-4813-aa3e-db65f34a8d2cr︠
+r"""
+Files containing examples of codes.
+
+"""
+︠43bc3cf2-86b8-4813-aa3e-db65f34a8d2c︠
+
+
 sys.path.append(".")
-import basiccodes as codes
-examples = [
+import basiccodes as codes   ## This allows you to type codes.<TAB>   to see available functions
+from basiccodes import *
+example_codes =  [
                  [[0,0,1,0,0],
                   [0,0,0,1,1],
                   [1,1,1,1,1],
                   [1,1,0,0,0]],
-                 []]
-︡d8e44bb0-53f0-49e0-8cd6-99142209a7b8︡
+                 [[0,0,0],[1,1,1]] # Code from tutorial 1 problem 3
+                 [(0,0,1,0,1),(1,1,0,1,1),(1,0,1,0,0),(1,0,0,1,0)]
+                 ]
+
+︡5d0f28d8-c645-4668-a3d2-54916ff81e29︡
 ︠751e0cb0-4f05-4e80-a34e-cfb2fbc3461d︠
-C=examples[0]
-︡00475662-5855-4d2f-843c-bc90fefc932f︡
-︠58fe881e-af85-41f8-a377-5784ecaa8f3a︠
-codes.minimum_distance(C)
-︡c36d87e4-88c1-4e07-8271-1543e91e2697︡{"stderr":"Error in lines 1-1\nTraceback (most recent call last):\n  File \"/mnt/home/DvaOtLNU/.sagemathcloud/sage_server.py\", line 633, in execute\n    exec compile(block+'\\n', '', 'single') in namespace, locals\n  File \"\", line 1, in <module>\n  File \"./basiccodes/basiccodes.py\", line 65, in minimum_distance\n    return dmin\nNameError: global name 'dmin' is not defined\n"}︡
-︠24f737f9-9ad7-4166-8686-87d4c9cfc245︠
+# Test nearest neighbour decoding
+success = 0
+C = example_codes
+N = 10000
+error_stats = {0:0,1:0,2:0,3:0,4:0,5:0}
+for x in C:
+    for i in range(N):
+        y = symmetric_binary_channel(x)
+        w = nearest_neighbour_decoding(y,C,complete_decoding = False)
+        d = Hamming_distance(x,y)
+        error_stats[d]+=1
+        if x == w:
+            success = success + 1
+        if d>=2 and x==w:
+            print "{0} is transported to {1} and decoded to {2}".format(x,y,w)
+print "Succesful decoding rate: {0}".format(1.0*success/(N*len(C)))
+︡8e87aacf-dbe5-4180-9771-8e0a965cf834︡{"stdout":"Succesful decoding rate: 0.186850000000000\n"}︡
+︠0792cbd9-3cd6-46c7-ab9f-1a72d78d8f8f︠
+# Note: The probability of having exactly one error is 6/32 = 0.1875
+︠0ad812a6-e2b1-4d49-ae33-a58f56af82b3︠
+︠e4d1965c-748c-428d-99a1-b6728d22848c︠
 
 
 
