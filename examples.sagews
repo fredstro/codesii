@@ -1,7 +1,8 @@
-r"""
-Files containing examples of codes.
+︠a3c49a9c-04bd-443b-8803-a8361440d95c︠
+#
+#Files containing examples of codes.
+#
 
-"""
 
 
 sys.path.append(".")
@@ -13,7 +14,7 @@ example_codes =  [
                  [(0,0,1,0,1),(1,1,0,1,1),(1,0,1,0,0),(1,0,0,1,0)]# Code from tutorial 1 problem 1
                  ]
 
-︡5f75bb7e-3471-4bad-8fa4-2d4946172901︡
+︡693fddac-19cf-4de9-ac09-037be3756caf︡{"stdout":"'\\nFiles containing examples of codes.\\n\\n'\n"}︡
 ︠751e0cb0-4f05-4e80-a34e-cfb2fbc3461d︠
 ︠0792cbd9-3cd6-46c7-ab9f-1a72d78d8f8f︠
 
