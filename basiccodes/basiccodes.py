@@ -186,3 +186,5 @@ def number_of_errors_corrected_by_nnd(C):
     from sage.all import floor
     d = minimum_distance(C)
     return floor( (d - 1.0)/2.0)
+
+

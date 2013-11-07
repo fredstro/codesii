@@ -14,8 +14,11 @@ example_codes =  [
                  [(0,0,1,0,1),(1,1,0,1,1),(1,0,1,0,0),(1,0,0,1,0)]# Code from tutorial 1 problem 1
                  ]
 
-︡693fddac-19cf-4de9-ac09-037be3756caf︡{"stdout":"'\\nFiles containing examples of codes.\\n\\n'\n"}︡
+︡1c89f6c5-8035-40f3-b4d6-3270a5359520︡
 ︠751e0cb0-4f05-4e80-a34e-cfb2fbc3461d︠
+︠e29e5407-ba13-4e4b-ac88-0506fdccb142︠
+minimum_distance(example_codes[0])
+︡816b42d7-65af-4b91-99a9-d2f10688c1cf︡{"stdout":"3\n"}︡
 ︠0792cbd9-3cd6-46c7-ab9f-1a72d78d8f8f︠
 
 ︡f60bfa41-ce4c-4eb8-ad93-7e45edbd043f︡
